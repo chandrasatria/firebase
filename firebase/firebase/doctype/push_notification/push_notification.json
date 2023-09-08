@@ -1,0 +1,176 @@
+{
+ "actions": [],
+ "creation": "2020-09-21 17:25:22.252483",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "enabled",
+  "column_break_2",
+  "channel",
+  "firebase_method",
+  "filters_section",
+  "subject",
+  "document_type",
+  "column_break_7",
+  "send_alert_on",
+  "value_changed",
+  "section_break_9",
+  "condition",
+  "column_break_11",
+  "condition_information",
+  "recipients_section",
+  "recipients",
+  "message_section",
+  "data",
+  "message",
+  "message_examples"
+ ],
+ "fields": [
+  {
+   "default": "0",
+   "fieldname": "enabled",
+   "fieldtype": "Check",
+   "label": "Enabled"
+  },
+  {
+   "fieldname": "column_break_2",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "channel",
+   "fieldtype": "Select",
+   "label": "Channel",
+   "options": "Firebase",
+   "reqd": 1
+  },
+  {
+   "fieldname": "filters_section",
+   "fieldtype": "Section Break",
+   "label": "Filters"
+  },
+  {
+   "description": "To add dynamic subject, use jinja tags like\n\n<div><pre><code>{{ doc.name }} Delivered</code></pre></div>",
+   "fieldname": "subject",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Subject",
+   "reqd": 1
+  },
+  {
+   "fieldname": "document_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Document Type",
+   "options": "DocType",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_7",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "send_alert_on",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Send Alert On",
+   "options": "\nNew\nSave\nSubmit\nValue Change",
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_9",
+   "fieldtype": "Section Break"
+  },
+  {
+   "description": "Optional: The alert will be sent if this expression is true",
+   "fieldname": "condition",
+   "fieldtype": "Code",
+   "in_list_view": 1,
+   "label": "Condition"
+  },
+  {
+   "fieldname": "column_break_11",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "condition_information",
+   "fieldtype": "HTML",
+   "label": "Condition Information",
+   "options": "<p><strong>Condition Examples:</strong></p>\n<pre>doc.status==\"Open\"<br>doc.due_date==nowdate()<br>doc.total &gt; 40000\n</pre>\n"
+  },
+  {
+   "fieldname": "recipients_section",
+   "fieldtype": "Section Break",
+   "label": "Recipients"
+  },
+  {
+   "fieldname": "recipients",
+   "fieldtype": "Table",
+   "label": "Recipients",
+   "options": "Push Notification Recipient",
+   "reqd": 1
+  },
+  {
+   "fieldname": "message_section",
+   "fieldtype": "Section Break",
+   "label": "Message"
+  },
+  {
+   "fieldname": "message",
+   "fieldtype": "Code",
+   "label": "Message",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.channel == \"Firebase\"",
+   "fieldname": "firebase_method",
+   "fieldtype": "Select",
+   "label": "Firebase Method",
+   "options": "Basic\nBasic Data\nGlobal Image\nFlutter Data\nFlutter Data Global"
+  },
+  {
+   "depends_on": "eval:doc.firebase_method == \"Basic Data\" || doc.firebase_method == \"Global Image\" || doc.firebase_method == \"Flutter Data\"",
+   "fieldname": "data",
+   "fieldtype": "Code",
+   "label": "Data"
+  },
+  {
+   "fieldname": "message_examples",
+   "fieldtype": "HTML",
+   "label": "Message Examples",
+   "options": "<h5>Message Example</h5>\n\n<pre>Hi {{ doc.full_name }}, your invoice has come.\n\n{{ comments[-1].comment }} by {{ comments[-1].by }}\n</pre>"
+  },
+  {
+   "depends_on": "eval:doc.send_alert_on == \"Value Change\"",
+   "description": "Send alert if this field's value changes",
+   "fieldname": "value_changed",
+   "fieldtype": "Select",
+   "label": "Value Changed"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "links": [],
+ "modified": "2021-01-19 15:22:23.211971",
+ "modified_by": "Administrator",
+ "module": "Firebase",
+ "name": "Push Notification",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "subject",
+ "track_changes": 1
+}

@@ -1,0 +1,31 @@
+{
+ "actions": [],
+ "creation": "2020-02-26 11:57:22.482381",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_notification_recipient"
+ ],
+ "fields": [
+  {
+   "fieldname": "user_notification_recipient",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User Notification Recipient",
+   "options": "User Notification Group Recipient"
+  }
+ ],
+ "istable": 1,
+ "links": [],
+ "modified": "2021-01-20 13:40:53.282546",
+ "modified_by": "Administrator",
+ "module": "User Notification",
+ "name": "User Notification Multiple Recipient Child",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

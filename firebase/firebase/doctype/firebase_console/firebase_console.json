@@ -1,0 +1,96 @@
+{
+ "actions": [],
+ "creation": "2019-10-13 07:57:52.673855",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "topic",
+  "title",
+  "body",
+  "image",
+  "is_using_data",
+  "data",
+  "badge",
+  "user_topic_send_notification"
+ ],
+ "fields": [
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Read Only",
+   "label": "Topic"
+  },
+  {
+   "description": "Optimize for 40 chars",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "description": "Optimize for 100 chars",
+   "fieldname": "body",
+   "fieldtype": "Small Text",
+   "label": "Body"
+  },
+  {
+   "default": "0",
+   "fieldname": "is_using_data",
+   "fieldtype": "Check",
+   "label": "Is Using Data"
+  },
+  {
+   "depends_on": "eval:(doc.is_using_data==1)",
+   "description": "JSON Formatted",
+   "fieldname": "data",
+   "fieldtype": "Text",
+   "label": "Data"
+  },
+  {
+   "default": "0",
+   "description": "iOS only",
+   "fieldname": "badge",
+   "fieldtype": "Int",
+   "label": "Badge"
+  },
+  {
+   "fieldname": "user_topic_send_notification",
+   "fieldtype": "Button",
+   "label": "Send Notification",
+   "options": "user_topic_send_notification"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "label": "Image"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-03-14 20:11:09.541948",
+ "modified_by": "Administrator",
+ "module": "Firebase",
+ "name": "Firebase Console",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

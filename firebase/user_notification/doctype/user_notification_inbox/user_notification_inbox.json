@@ -1,0 +1,148 @@
+{
+ "actions": [],
+ "autoname": "format:{user_notification_send_message}",
+ "creation": "2020-02-20 10:13:47.819894",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user_notification_send_message",
+  "destination",
+  "user_notification_inbox_user_child",
+  "section_break_5",
+  "date_publish",
+  "time_publish",
+  "section_break_7",
+  "icon",
+  "image",
+  "title",
+  "detail"
+ ],
+ "fields": [
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  },
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title"
+  },
+  {
+   "fieldname": "detail",
+   "fieldtype": "Text Editor",
+   "label": "Detail"
+  },
+  {
+   "fieldname": "user_notification_send_message",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User Notification Send Message",
+   "options": "User Notification Send Message",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "section_break_5",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Select",
+   "label": "Destination",
+   "options": "Global\nMultiple"
+  },
+  {
+   "depends_on": "eval:doc.destination == \"Multiple\"",
+   "fieldname": "user_notification_inbox_user_child",
+   "fieldtype": "Table",
+   "label": "User Notification Inbox User Child",
+   "options": "User Notification Inbox User Child"
+  },
+  {
+   "fieldname": "section_break_7",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fieldname": "date_publish",
+   "fieldtype": "Date",
+   "label": "Date Publish"
+  },
+  {
+   "fieldname": "time_publish",
+   "fieldtype": "Time",
+   "label": "Time Publish"
+  },
+  {
+   "fieldname": "icon",
+   "fieldtype": "Attach Image",
+   "label": "Icon"
+  }
+ ],
+ "image_field": "image",
+ "links": [],
+ "modified": "2021-01-20 20:40:14.436269",
+ "modified_by": "Administrator",
+ "module": "User Notification",
+ "name": "User Notification Inbox",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "read": 1,
+   "role": "User Inbox"
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin User Notification",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "All",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Guest",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

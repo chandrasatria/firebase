@@ -1,0 +1,107 @@
+{
+ "creation": "2019-10-13 08:40:49.836599",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "id",
+  "response_code",
+  "message_id",
+  "user",
+  "topic",
+  "title",
+  "body",
+  "content",
+  "badge",
+  "data",
+  "error_response"
+ ],
+ "fields": [
+  {
+   "fieldname": "response_code",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Response Code"
+  },
+  {
+   "fieldname": "message_id",
+   "fieldtype": "Data",
+   "label": "Message ID"
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "User"
+  },
+  {
+   "fieldname": "topic",
+   "fieldtype": "Read Only",
+   "label": "Topic"
+  },
+  {
+   "description": "Optimize for 40 chars",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title"
+  },
+  {
+   "description": "Optimize for 100 chars",
+   "fieldname": "body",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Body"
+  },
+  {
+   "fieldname": "content",
+   "fieldtype": "Text",
+   "label": "Content"
+  },
+  {
+   "description": "iOS only",
+   "fieldname": "badge",
+   "fieldtype": "Int",
+   "label": "Badge"
+  },
+  {
+   "fieldname": "data",
+   "fieldtype": "Text",
+   "label": "Data"
+  },
+  {
+   "fieldname": "error_response",
+   "fieldtype": "Text",
+   "label": "Error Response"
+  },
+  {
+   "fieldname": "id",
+   "fieldtype": "Data",
+   "label": "ID"
+  }
+ ],
+ "modified": "2020-04-09 09:20:00.499825",
+ "modified_by": "Administrator",
+ "module": "Firebase",
+ "name": "Firebase Log",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "read": 1,
+   "role": "All",
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "title_field": "user"
+}

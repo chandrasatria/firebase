@@ -1,0 +1,251 @@
+{
+ "actions": [],
+ "autoname": "UN-SchedulingMessage.YYYY./.####.",
+ "creation": "2020-03-20 14:45:08.399789",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "detail_message_section",
+  "url",
+  "image",
+  "title",
+  "subtitle",
+  "using_notification",
+  "using_inbox",
+  "detail",
+  "destination",
+  "user_notification_multiple_user_child",
+  "scheduling_section_section",
+  "from_date",
+  "to_date",
+  "column_break_3",
+  "total_date",
+  "schedule_section",
+  "schedule_repetition",
+  "monthly_type",
+  "date",
+  "last_date",
+  "week_of",
+  "last_week",
+  "day",
+  "time",
+  "generate_date",
+  "date_section",
+  "schedule_date",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "from_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "From Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "to_date",
+   "fieldtype": "Date",
+   "in_list_view": 1,
+   "label": "To Date",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Time",
+   "options": "\n00:30\n01:00\n01:30\n02:00\n02:30\n03:00\n03:30\n04:00\n04:30\n05:00\n05:30\n06:00\n06:30\n07:00\n07:30\n08:00\n08:30\n09:00\n09:30\n10:00\n10:30\n11:00\n11:30\n12:00\n12:30\n13:00\n13:30\n14:00\n14:30\n15:00\n15:30\n16:00\n16:30\n17:00\n17:30\n18:00\n18:30\n19:00\n19:30\n20:00\n20:30\n21:00\n21:30\n22:00\n22:30\n23:00\n23:30",
+   "reqd": 1
+  },
+  {
+   "fieldname": "schedule_date",
+   "fieldtype": "Table",
+   "label": "Schedule Date",
+   "options": "User Notification Schedule Date"
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "User Notification Scheduling Message",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "schedule_repetition",
+   "fieldtype": "Select",
+   "label": "Schedule Repetition",
+   "options": "Weekly\nMonthly",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_3",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "total_date",
+   "fieldtype": "Data",
+   "label": "Total Date",
+   "read_only": 1
+  },
+  {
+   "fieldname": "day",
+   "fieldtype": "Select",
+   "label": "Day",
+   "options": "Sunday\nMonday\nTuesday\nWednesday\nThursday\nFriday\nSaturday"
+  },
+  {
+   "fieldname": "schedule_section",
+   "fieldtype": "Section Break",
+   "label": "Schedule Section"
+  },
+  {
+   "fieldname": "date_section",
+   "fieldtype": "Section Break",
+   "label": "Date Section"
+  },
+  {
+   "fieldname": "generate_date",
+   "fieldtype": "Button",
+   "label": "Generate Date",
+   "options": "generate_date"
+  },
+  {
+   "fieldname": "monthly_type",
+   "fieldtype": "Select",
+   "label": "Monthly Type",
+   "options": "Date\nWeek Of"
+  },
+  {
+   "fieldname": "date",
+   "fieldtype": "Data",
+   "label": "Date"
+  },
+  {
+   "default": "0",
+   "fieldname": "last_date",
+   "fieldtype": "Check",
+   "label": "Last Date"
+  },
+  {
+   "fieldname": "week_of",
+   "fieldtype": "Select",
+   "label": "Week Of",
+   "options": "1\n2\n3\n4\n5"
+  },
+  {
+   "default": "0",
+   "fieldname": "last_week",
+   "fieldtype": "Check",
+   "label": "Last Week"
+  },
+  {
+   "fieldname": "detail_message_section",
+   "fieldtype": "Section Break",
+   "label": "Detail Message"
+  },
+  {
+   "fieldname": "url",
+   "fieldtype": "Data",
+   "label": "Url"
+  },
+  {
+   "fieldname": "image",
+   "fieldtype": "Attach Image",
+   "hidden": 1,
+   "label": "Image"
+  },
+  {
+   "description": "Optimize for 40 chars",
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "label": "Title",
+   "reqd": 1
+  },
+  {
+   "description": "Optimize for 100 chars",
+   "fieldname": "subtitle",
+   "fieldtype": "Data",
+   "label": "Subtitle"
+  },
+  {
+   "fieldname": "detail",
+   "fieldtype": "Text Editor",
+   "label": "Detail"
+  },
+  {
+   "fieldname": "destination",
+   "fieldtype": "Select",
+   "label": "Destination",
+   "options": "Global\nMultiple",
+   "reqd": 1
+  },
+  {
+   "depends_on": "eval:doc.destination == \"Multiple\"",
+   "fieldname": "user_notification_multiple_user_child",
+   "fieldtype": "Table",
+   "label": "User Notification Multiple User Child",
+   "options": "User Notification Multiple User Child"
+  },
+  {
+   "default": "1",
+   "description": "Check this if you want to send Notification on mobile apps.",
+   "fieldname": "using_notification",
+   "fieldtype": "Check",
+   "label": "Using Notification"
+  },
+  {
+   "default": "1",
+   "description": "Check this if you want to create Inbox so people can read the Inbox on Inbox section on mobile apps.",
+   "fieldname": "using_inbox",
+   "fieldtype": "Check",
+   "label": "Using Inbox"
+  },
+  {
+   "fieldname": "scheduling_section_section",
+   "fieldtype": "Section Break",
+   "label": "Scheduling Section"
+  }
+ ],
+ "is_submittable": 1,
+ "links": [],
+ "modified": "2021-01-20 13:34:43.623179",
+ "modified_by": "Administrator",
+ "module": "User Notification",
+ "name": "User Notification Scheduling Message",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Admin Pesan",
+   "share": 1,
+   "submit": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "title",
+ "track_changes": 1
+}

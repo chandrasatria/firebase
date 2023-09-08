@@ -1,0 +1,18 @@
+include MANIFEST.in
+include requirements.txt
+include *.json
+include *.md
+include *.py
+include *.txt
+recursive-include firebase *.css
+recursive-include firebase *.csv
+recursive-include firebase *.html
+recursive-include firebase *.ico
+recursive-include firebase *.js
+recursive-include firebase *.json
+recursive-include firebase *.md
+recursive-include firebase *.png
+recursive-include firebase *.py
+recursive-include firebase *.svg
+recursive-include firebase *.txt
+recursive-exclude firebase *.pyc

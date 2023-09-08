@@ -1,0 +1,20 @@
+{
+ "action": "Watch Video",
+ "creation": "2020-11-19 15:57:21.501589",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_mandatory": 0,
+ "is_single": 1,
+ "is_skipped": 0,
+ "modified": "2020-11-19 15:57:44.599430",
+ "modified_by": "Administrator",
+ "name": "Setup Firebase Account",
+ "owner": "Administrator",
+ "reference_document": "Firebase Setting",
+ "show_full_form": 0,
+ "title": "Setup Firebase Account",
+ "validate_action": 1,
+ "video_url": "https://www.youtube.com/watch?v=6juww5Lmvgo&t=53s"
+}

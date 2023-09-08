@@ -1,0 +1,45 @@
+{
+ "creation": "2020-02-26 16:33:17.501089",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "user",
+  "full_name",
+  "photo"
+ ],
+ "fields": [
+  {
+   "fetch_from": "arknet_user.full_name",
+   "fieldname": "full_name",
+   "fieldtype": "Data",
+   "label": "Full Name",
+   "read_only": 1
+  },
+  {
+   "fetch_from": "arknet_user.profile_photo",
+   "fieldname": "photo",
+   "fieldtype": "Data",
+   "label": "Photo",
+   "read_only": 1
+  },
+  {
+   "fieldname": "user",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "User",
+   "options": "Email"
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-08-18 17:15:42.362882",
+ "modified_by": "Administrator",
+ "module": "User Notification",
+ "name": "User Notification Group Recipient User",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

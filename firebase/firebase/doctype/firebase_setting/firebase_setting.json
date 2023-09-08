@@ -1,0 +1,83 @@
+{
+ "actions": [],
+ "creation": "2019-10-13 07:52:17.010627",
+ "doctype": "DocType",
+ "engine": "InnoDB",
+ "field_order": [
+  "site_url",
+  "project_name",
+  "project_url",
+  "server_key",
+  "firebase_config",
+  "firebase_pair_key"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Name",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project_url",
+   "fieldtype": "Small Text",
+   "label": "Project URL"
+  },
+  {
+   "description": "Use in Android, iOS, and Website",
+   "fieldname": "server_key",
+   "fieldtype": "Small Text",
+   "in_list_view": 1,
+   "label": "Server Key",
+   "reqd": 1
+  },
+  {
+   "description": "Use in Website",
+   "fieldname": "firebase_config",
+   "fieldtype": "HTML Editor",
+   "label": "Firebase Config"
+  },
+  {
+   "description": "Use in Website",
+   "fieldname": "firebase_pair_key",
+   "fieldtype": "Small Text",
+   "label": "Firebase Pair Key"
+  },
+  {
+   "description": "Ini URL dari site ini. Nantinya url ini akan dipakai saat kirim firebase untuk locate file image. <br>\nContoh http://project.das.com  ATAU http://46.137.250.50:81",
+   "fieldname": "site_url",
+   "fieldtype": "Small Text",
+   "label": "Site Url"
+  }
+ ],
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-02-02 09:00:58.033335",
+ "modified_by": "Administrator",
+ "module": "Firebase",
+ "name": "Firebase Setting",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "All",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "ASC",
+ "track_changes": 1
+}

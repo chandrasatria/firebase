@@ -1,0 +1,19 @@
+{
+ "action": "Update Settings",
+ "creation": "2020-11-19 15:58:50.140460",
+ "docstatus": 0,
+ "doctype": "Onboarding Step",
+ "idx": 0,
+ "is_complete": 0,
+ "is_mandatory": 0,
+ "is_single": 1,
+ "is_skipped": 0,
+ "modified": "2020-11-19 15:58:50.140460",
+ "modified_by": "Administrator",
+ "name": "Connect to Firebase Setting",
+ "owner": "Administrator",
+ "reference_document": "Firebase Setting",
+ "show_full_form": 0,
+ "title": "Connect to Firebase Setting",
+ "validate_action": 0
+}

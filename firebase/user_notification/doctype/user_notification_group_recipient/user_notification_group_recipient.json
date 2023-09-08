@@ -1,0 +1,71 @@
+{
+ "actions": [],
+ "autoname": "field:title",
+ "creation": "2020-02-26 16:31:18.064200",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "description",
+  "title",
+  "is_private",
+  "private_key",
+  "user_notification_group_recipient_user"
+ ],
+ "fields": [
+  {
+   "fieldname": "title",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Title",
+   "reqd": 1,
+   "unique": 1
+  },
+  {
+   "fieldname": "user_notification_group_recipient_user",
+   "fieldtype": "Table",
+   "label": "User Notification Group Recipient User",
+   "options": "User Notification Group Recipient User"
+  },
+  {
+   "description": "Private means to join the news, user must have the invitation code.",
+   "fieldname": "is_private",
+   "fieldtype": "Data",
+   "label": "Is Private"
+  },
+  {
+   "fieldname": "private_key",
+   "fieldtype": "Data",
+   "label": "Private Key"
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "HTML",
+   "label": "Description",
+   "options": "User Notification Group Recipient adalah sebuah doctype untuk menampung member newsletter yang mau bergabung."
+  }
+ ],
+ "links": [],
+ "modified": "2021-01-20 13:37:06.674271",
+ "modified_by": "Administrator",
+ "module": "User Notification",
+ "name": "User Notification Group Recipient",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}

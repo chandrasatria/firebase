@@ -1,0 +1,29 @@
+{
+ "allow_roles": [
+  {
+   "role": "System Manager"
+  }
+ ],
+ "creation": "2020-11-19 15:57:23.863973",
+ "docstatus": 0,
+ "doctype": "Module Onboarding",
+ "documentation_url": "https://google.com",
+ "idx": 0,
+ "is_complete": 0,
+ "modified": "2020-11-19 15:58:52.578024",
+ "modified_by": "Administrator",
+ "module": "Firebase",
+ "name": "Firebase",
+ "owner": "Administrator",
+ "steps": [
+  {
+   "step": "Setup Firebase Account"
+  },
+  {
+   "step": "Connect to Firebase Setting"
+  }
+ ],
+ "subtitle": "Setup your Firebase",
+ "success_message": "Great, now you can send a notification through your Application",
+ "title": "Setup your Firebase"
+}

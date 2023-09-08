@@ -1,0 +1,64 @@
+{
+ "actions": [],
+ "creation": "2021-01-20 13:55:52.602852",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "send_to_android",
+  "send_to_ios",
+  "send_to_flutter",
+  "send_to_web"
+ ],
+ "fields": [
+  {
+   "default": "1",
+   "fieldname": "send_to_android",
+   "fieldtype": "Check",
+   "label": "Send to Android"
+  },
+  {
+   "default": "1",
+   "fieldname": "send_to_ios",
+   "fieldtype": "Check",
+   "label": "Send to Ios"
+  },
+  {
+   "default": "0",
+   "fieldname": "send_to_flutter",
+   "fieldtype": "Check",
+   "label": "Send to Flutter"
+  },
+  {
+   "default": "0",
+   "description": "Need extra works. <br>\nPlease contact administrator for further information",
+   "fieldname": "send_to_web",
+   "fieldtype": "Check",
+   "label": "Send to Web"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "issingle": 1,
+ "links": [],
+ "modified": "2021-01-20 14:29:56.516670",
+ "modified_by": "Administrator",
+ "module": "User Notification",
+ "name": "User Notification Settings",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "print": 1,
+   "read": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

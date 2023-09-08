@@ -1,0 +1,30 @@
+{
+ "actions": [],
+ "creation": "2020-09-21 17:23:53.133089",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "receiver_by_document_field"
+ ],
+ "fields": [
+  {
+   "fieldname": "receiver_by_document_field",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Receiver By Document Field"
+  }
+ ],
+ "index_web_pages_for_search": 1,
+ "istable": 1,
+ "links": [],
+ "modified": "2020-09-21 17:36:08.727114",
+ "modified_by": "Administrator",
+ "module": "Firebase",
+ "name": "Push Notification Recipient",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
